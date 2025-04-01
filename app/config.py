@@ -8,5 +8,6 @@ def get_connection():
     user= os.getenv("DB_USER", "root"),
     password= os.getenv("DB_PASSWORD", "12345"),
     database= os.getenv("DB_NAME", "test_db"),
-    cursorclass= pymysql.cursors.DictCursor
+    cursorclass= pymysql.cursors.DictCursor,
+    ssl={'ssl':{}}
   )
